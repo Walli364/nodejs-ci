@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps - Building Better Software</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f3460 0%, #533483 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero {
+      background: white;
+      border-radius: 10px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero h2 {
+      color: #0f3460;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #533483;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card ul li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .card ul li::before {
+      content: "✓ ";
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .pipeline {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .pipeline h3 {
+      color: #0f3460;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .pipeline-steps {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .step {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
+      color: white;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .step::after {
+      content: "→";
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      color: #533483;
+    }
+
+    .step:last-child::after {
+      content: "";
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: white;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .step::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 DevOps</h1>
+    <p>Bridging Development and Operations</p>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h2>What is DevOps?</h2>
+      <p>
+        DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). 
+        It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. 
+        DevOps is complementary to Agile software development; several DevOps aspects came from Agile methodology.
+      </p>
+    </section>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🔧 Key Practices</h3>
+        <ul>
+          <li>Continuous Integration (CI)</li>
+          <li>Continuous Delivery (CD)</li>
+          <li>Infrastructure as Code</li>
+          <li>Monitoring & Logging</li>
+          <li>Communication & Collaboration</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🛠️ Popular Tools</h3>
+        <ul>
+          <li>Jenkins / GitHub Actions</li>
+          <li>Docker & Kubernetes</li>
+          <li>Terraform & Ansible</li>
+          <li>Prometheus & Grafana</li>
+          <li>Git & GitHub/GitLab</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>✨ Benefits</h3>
+        <ul>
+          <li>Faster Time to Market</li>
+          <li>Improved Collaboration</li>
+          <li>Higher Quality Software</li>
+          <li>Reduced Failure Rate</li>
+          <li>Better Resource Management</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="pipeline">
+      <h3>CI/CD Pipeline</h3>
+      <div class="pipeline-steps">
+        <div class="step">Code</div>
+        <div class="step">Build</div>
+        <div class="step">Test</div>
+        <div class="step">Release</div>
+        <div class="step">Deploy</div>
+        <div class="step">Monitor</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Built with Node.js & Express | DevOps Learning Project</p>
+  </footer>
+</body>
+</html>

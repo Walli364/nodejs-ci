@@ -1,0 +1,20 @@
+{
+  "name": "devops-website",
+  "version": "1.0.0",
+  "description": "A simple single page website about DevOps",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "devops",
+    "nodejs",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.22.1"
+  }
+}
